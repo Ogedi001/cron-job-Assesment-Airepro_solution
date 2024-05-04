@@ -25,14 +25,11 @@ The CRON JOB-API provides endpoints for managing products through CRUD operation
    ```bash
    git clone <repository_url>
 2. **Navigate to the project directory:**
-  ```bash
-cd <project_directory>
+  cd <project_directory>
 
-3. **Install dependencies:**
+2. **Navigate to the project directory:**
   ```bash
-  npm install
-or
-  yarn install
+  npm install or yarn install
 
 ## Database Setup
 
