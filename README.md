@@ -85,15 +85,15 @@ For detailed API documentation and examples, please refer to the [Postman Docume
 ## Endpoints
 **Products**
 ```plaintext
-POST /api/v1/product: Create a new product.
-GET /api/v1/product: Get all products.
-GET /api/v1/product/:id: Get a product by ID.
-PUT /api/v1/product/:id: Update a product Info.
-DELETE /api/v1/product/:id: Delete a product by ID.
+POST /api/v1/Product: Create a new product.
+GET /api/v1/Product: Get all products.
+GET /api/v1/Product/:id: Get a product by ID.
+PUT /api/v1/Product/:id: Update a product Info.
+DELETE /api/v1/Product/:id: Delete a product by ID.
 ```
 
 **Create a New Product**
-POST /api/v1/product
+POST /api/v1/Product
 
 **Body:**
 ```json
@@ -107,7 +107,7 @@ POST /api/v1/product
 
 **Example:**
 ```bash
-curl --location --request POST 'https://marketplace-uq57.onrender.com/api/v1/product' \
+curl --location --request POST 'https://marketplace-uq57.onrender.com/api/v1/Product' \
 --data '{
 "name":"Book",
 "price":500,
