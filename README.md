@@ -58,9 +58,10 @@ Update the database configuration in the **.env** file with your database creden
 
 
 **Set up environment variables: Rename .env.example to .env and fill in the required variables.**
-```plaintext
-  PORT,
-  DATABASE_URL
+plaintext
+Copy code
+PORT=<port_number>
+DATABASE_URL=<your_database_url>
 
 ## Running the Application
 1. **Start the application server:**
