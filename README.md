@@ -1,4 +1,4 @@
-##CRON JOB-API
+#CRON JOB-API
 Welcome to the documentation for the CRON JOB-API!
 A Backend Developer Assignment with node js: Creating CRUD Functions with MySQL and Cron Job Integration
 
@@ -56,13 +56,12 @@ Start the application server:
 npm start (for production)
 npm run dev(for development)
 
-## Documentation
+# Documentation
 For detailed API documentation and examples, please refer to the [Postman Documentation]
 (https://documenter.getpostman.com/view/26097715/2sA3JGePSS)
 
 ##Endpoints
-
-#Products
+##Products
 -POST /api/v1/product: Create a new product.
 -GET /api/v1/product: Get all products.
 -GET /api/v1/product/:id: Get a product by ID.
@@ -82,7 +81,7 @@ Body
 }
 Example
 
-# Create a New Product
+## Create a New Product
 curl --location --request POST 'http://localhost:5000/api/v1/product' \
 --data '{
 "name":"Book",
@@ -91,7 +90,7 @@ curl --location --request POST 'http://localhost:5000/api/v1/product' \
 "description":"Magic for kids who love to write"
 }'
 
-#Response Codes
+##Response Codes
 201 CREATED: Successful creation.
 200 OK: Successful request.
 404 Not Found: Resource not found.
