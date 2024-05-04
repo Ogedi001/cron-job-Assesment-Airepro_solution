@@ -32,7 +32,6 @@ cd <project_directory>
   ```bash
   npm install
 or
-  ```bash
   yarn install
 
 ## Database Setup
