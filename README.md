@@ -64,9 +64,9 @@ DATABASE_URL
 ## Running the Application
 1. **Start the application server:**
    ```bash
-   npm start  # for production
-or
+   npm start  # for production or
    npm run dev  # for development
+
 
 
 ## Documentation
