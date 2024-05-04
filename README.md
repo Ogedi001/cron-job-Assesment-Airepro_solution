@@ -72,11 +72,12 @@ DATABASE_URL=<your_database_url>
 1. **Start the application server:**
    ```bash
    npm start  # for production
-```
+   ```
  or
+
  ```bash
    npm run dev  # for development
-```
+ ```
 
 ## Documentation
 For detailed API documentation and examples, please refer to the [Postman Documentation](https://documenter.getpostman.com/view/26097715/2sA3JGePSS)
