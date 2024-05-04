@@ -1,11 +1,14 @@
 #CRON JOB-API
+
 Welcome to the documentation for the CRON JOB-API!
 A Backend Developer Assignment with node js: Creating CRUD Functions with MySQL and Cron Job Integration
 
 ##Introduction
+
 The CRON JOB-API is a set of endpoints designed to implement CRUD (Create, Read, Update, Delete) operations on product table on a MySQL database and set up a cron job to periodically fetch data and post it to different  Sales tables within the database.
 
 ##Technologies Used
+
 -Node.js
 -Express.js
 -TypeScript
@@ -32,6 +35,7 @@ This guide provides instructions on setting up the project, installing dependenc
 3.npm install or yarn install
 
 #Database Setup
+
 Set up your database connection:
 Update the database configuration in the .env file with your database credentials:
 
@@ -52,16 +56,20 @@ npx prisma migrate dev
 Set up environment variables: Rename .env.example to .env and fill in the required variables.
 
 #Running the Application
+
 Start the application server:
 npm start (for production)
 npm run dev(for development)
 
 # Documentation
+
 For detailed API documentation and examples, please refer to the [Postman Documentation]
 (https://documenter.getpostman.com/view/26097715/2sA3JGePSS)
 
 ##Endpoints
+
 ##Products
+
 -POST /api/v1/product: Create a new product.
 -GET /api/v1/product: Get all products.
 -GET /api/v1/product/:id: Get a product by ID.
@@ -82,6 +90,7 @@ Body
 Example
 
 ## Create a New Product
+
 curl --location --request POST 'http://localhost:5000/api/v1/product' \
 --data '{
 "name":"Book",
@@ -91,9 +100,12 @@ curl --location --request POST 'http://localhost:5000/api/v1/product' \
 }'
 
 ##Response Codes
+
 201 CREATED: Successful creation.
 200 OK: Successful request.
 404 Not Found: Resource not found.
 500 Internal Server Error: Server error.
-Error Handling
+
+##Error Handling
+
 Errors are returned as JSON objects with a message field describing the error.
