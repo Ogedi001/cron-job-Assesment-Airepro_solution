@@ -78,7 +78,8 @@ DATABASE_URL=<your_database_url>
 ```
 
 ## Documentation
-For detailed API documentation and examples, please refer to the [Postman Documentation].(https://documenter.getpostman.com/view/26097715/2sA3JGePSS)
+For detailed API documentation and examples, please refer to the [Postman Documentation](https://documenter.getpostman.com/view/26097715/2sA3JGePSS)
+
 ## Endpoints
 **Products**
 ```plaintext
