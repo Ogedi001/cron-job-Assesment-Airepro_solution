@@ -58,8 +58,9 @@ Update the database configuration in the **.env** file with your database creden
 
 
 **Set up environment variables: Rename .env.example to .env and fill in the required variables.**
-PORT,
-DATABASE_URL
+```plaintext
+  PORT,
+  DATABASE_URL
 
 ## Running the Application
 1. **Start the application server:**
@@ -67,12 +68,11 @@ DATABASE_URL
    npm start  # for production or
    npm run dev  # for development
 
-
-
 ## Documentation
 For detailed API documentation and examples, please refer to the Postman Documentation.
 ## Endpoints
 **Products**
+
 POST /api/v1/product: Create a new product.
 GET /api/v1/product: Get all products.
 GET /api/v1/product/:id: Get a product by ID.
