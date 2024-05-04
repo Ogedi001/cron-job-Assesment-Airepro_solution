@@ -30,8 +30,12 @@ The CRON JOB-API provides endpoints for managing products through CRUD operation
 
 2. **Install dependencies:**  
    ```bash
-   npm install or yarn install
-
+   npm install 
+```
+or 
+ ```bash
+  yarn install
+ ```
 
 ## Database Setup
 
@@ -39,7 +43,7 @@ The CRON JOB-API provides endpoints for managing products through CRUD operation
 Update the database configuration in the **.env** file with your database credentials:
 
 1. **Set up your database connection:**
-   ```bash
+   ```plaintext
    DB_CONNECTION=mysql
    DB_HOST=localhost
    DB_PORT=3306
@@ -47,50 +51,59 @@ Update the database configuration in the **.env** file with your database creden
    DB_USERNAME=your_username
    DB_PASSWORD=your_password
 
-2. **Connection string:**
+ **connection string:**
    ```bash
    DB_URL=mysql://your_username:your_password@localhost:3306/cron_db
-
-
-3. **Run database migrations:**
+   ```
+**Run database migrations:**
    ```bash
    npx prisma migrate dev
-
+```
 
 **Set up environment variables: Rename .env.example to .env and fill in the required variables.**
 ```plaintext
 PORT=<port_number>
 DATABASE_URL=<your_database_url>
+```
+
 
 ## Running the Application
 1. **Start the application server:**
    ```bash
-   npm start  # for production or
+   npm start  # for production
+```
+ or
+ ```bash
    npm run dev  # for development
+```
 
 ## Documentation
-For detailed API documentation and examples, please refer to the Postman Documentation.
+For detailed API documentation and examples, please refer to the [Postman Documentation].(https://documenter.getpostman.com/view/26097715/2sA3JGePSS)
 ## Endpoints
 **Products**
-
+```plaintext
 POST /api/v1/product: Create a new product.
 GET /api/v1/product: Get all products.
 GET /api/v1/product/:id: Get a product by ID.
-PUT /api/v1/product/:id: Update a product.
+PUT /api/v1/product/:id: Update a product Info.
 DELETE /api/v1/product/:id: Delete a product by ID.
+```
 
 **Create a New Product**
 POST /api/v1/product
 
 **Body:**
+```json
 {
   "name": "Book",
   "price": 500,
   "quantity": 10,
   "description": "Magic for kids who love to write"
 }
+```
 
 **Example:**
+```bash
 curl --location --request POST 'http://localhost:5000/api/v1/product' \
 --data '{
 "name":"Book",
@@ -98,14 +111,17 @@ curl --location --request POST 'http://localhost:5000/api/v1/product' \
 "quantity":10,
 "description":"Magic for kids who love to write"
 }'
-
+```
 
 # Response Codes
-
+```plaintext
 **201 CREATED:** Successful creation.
 **200 OK:** Successful request.
 **404 Not Found:** Resource not found.
 **500 Internal Server Error:** Server error.
+```
 
 # Error Handling
+```plaintext
 Errors are returned as JSON objects with a message field describing the error.
+```
