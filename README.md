@@ -48,22 +48,26 @@ Update the database configuration in the **.env** file with your database creden
    DB_PASSWORD=your_password
 
 2. **Connection string:**
-DB_URL=mysql://your_username:your_password@localhost:3306/cron_db
+   ```bash
+   DB_URL=mysql://your_username:your_password@localhost:3306/cron_db
 
-**Run database migrations:**
 
-npx prisma migrate dev
+3. **Run database migrations:**
+   ```bash
+   npx prisma migrate dev
+
 
 **Set up environment variables: Rename .env.example to .env and fill in the required variables.**
 PORT,
 DATABASE_URL
 
 ## Running the Application
-**Start the application server:**
-
-npm start  # for production
+1. **Start the application server:**
+   ```bash
+   npm start  # for production
 or
-npm run dev  # for development
+   npm run dev  # for development
+
 
 ## Documentation
 For detailed API documentation and examples, please refer to the Postman Documentation.
