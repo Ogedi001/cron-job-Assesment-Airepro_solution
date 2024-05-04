@@ -37,7 +37,6 @@ The CRON JOB-API provides endpoints for managing products through CRUD operation
 
 **Set up your database connection:**
 Update the database configuration in the **.env** file with your database credentials:
-1. **Navigate to the project directory:**  
    ```bash
    DB_CONNECTION=mysql
    DB_HOST=localhost
