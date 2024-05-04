@@ -3,7 +3,7 @@ import { prisma } from "./client";
 import logger from "./Logger";
 import { sellProduct } from "./utils";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1000;
 
 // start the express app
 const start = async () => {
