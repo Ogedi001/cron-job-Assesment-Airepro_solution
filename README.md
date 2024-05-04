@@ -35,7 +35,7 @@ or
 ## Database Setup
 
 **Set up your database connection:**
-Update the database configuration in the .env file with your database credentials:
+Update the database configuration in the **.env** file with your database credentials:
 
 DB_CONNECTION=mysql
 DB_HOST=localhost
@@ -43,6 +43,7 @@ DB_PORT=3306
 DB_DATABASE=your_database_name
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
+
 
 **Connection string:**
 DB_URL=mysql://your_username:your_password@localhost:3306/cron_db
