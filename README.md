@@ -1,6 +1,6 @@
 # CRON JOB-API
 
-Welcome to the documentation for the CRON JOB-API! This API is a Backend Developer Assignment with Node.js, implementing CRUD Functions with MySQL and Cron Job Integration.
+Welcome to the documentation for the CRON JOB-API! This API is a Backend Developer Job Aplication Assignment with Node.js, implementing CRUD Functions with MySQL and Cron Job Integration.
 
 ## Introduction
 
@@ -107,7 +107,7 @@ POST /api/v1/product
 
 **Example:**
 ```bash
-curl --location --request POST 'http://localhost:5000/api/v1/product' \
+curl --location --request POST 'https://marketplace-uq57.onrender.com/api/v1/product' \
 --data '{
 "name":"Book",
 "price":500,
