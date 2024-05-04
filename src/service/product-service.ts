@@ -72,11 +72,20 @@ export const getAllProductService = async (query: any):Promise<ProductsReturnedD
     products,
   };
 };
-export const updateProductService = async (id:number,data: ProductData) => {
+
+export const getAllProduct_CronService = async ()=> {
+  const products = await prisma.product.findMany({
+  });
+return products
+};
+
+
+
+export const updateProductService = async (id:number,payload:Partial<Product>) => {
   const product = await prisma.product.update({
     where:{id},
     data: {
-      ...data,
+      ...payload,
     },
   });
   return product;

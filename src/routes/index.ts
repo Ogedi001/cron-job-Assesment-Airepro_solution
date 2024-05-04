@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { productRoute } from "./auth-user-route";
+import { productRoute } from "./product-route";
 import { salesRoute } from "./sales-route";
 
 

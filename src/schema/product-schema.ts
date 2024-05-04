@@ -1,67 +1,41 @@
 import { body, param } from "express-validator";
 
-export const userByIdSchema = () => {
-  return [param("userId").notEmpty().withMessage("userId param is required")];
+export const productByIdSchema = () => {
+  return [param("id").notEmpty().withMessage("Product Id param is required")];
 };
 
-export const registerUserSchema = () => {
+export const createProductSchema = () => {
   return [
-    body("firstname").notEmpty().withMessage("Please provide your first name"),
-    body("lastname").notEmpty().withMessage("Please provide your last name"),
-    body("email").isEmail().withMessage("Please provide a valid email"),
-    body("password")
-      .notEmpty()
-      .trim()
-      .isLength({ min: 6, max: 25 })
-      .withMessage("Password must be between 6 to 25 characters"),
-      body("comfirmPassword")
-      .notEmpty()
-      .trim()
-      .isLength({ min: 6, max: 25 })
-      .withMessage("confirmPassword must be between 6 to 25 characters"),
+    body("name")
+      .notEmpty().withMessage("Name is required"),
+    body("price")
+      .notEmpty().withMessage("Price is required")
+      .isNumeric().withMessage("Price must be a number"),
+    body("quantity")
+      .notEmpty().withMessage("Quantity is required")
+      .isInt({ min: 0 }).withMessage("Quantity must be a non-negative integer"),
+    body("description")
+      .notEmpty().withMessage("Description is required")
   ];
 };
 
-export const emailVerificationSchema = () => {
-    return [
-      body("userId").notEmpty().withMessage("Please provide an Id"),
-      body("token").notEmpty().withMessage("Please provide a token"),
-    ];
-};
-
-export const resendEmailVerificationSchema = () => {
-    return [body("email").isEmail().withMessage("Please provide an email")];
-};
-
-export const loginSchema = () => {
-    return [
-      body("email").isEmail().withMessage("Please provide an email"),
-      body("password").notEmpty().withMessage("Please provide a password"),
-    ];
-};
-
-export const userUpdatePasswordSchema = () => {
-    return [
-      body("oldPassword")
-        .notEmpty()
-        .withMessage("Please provide oldPassword"),
-      body("newPassword")
-        .notEmpty()
-        .withMessage("Please provide newPassword"),
-    ];
-};
-
-export const forgotPasswordSchema = () => {
-    return [body("email").isEmail().withMessage("Please provide an email")];
-};
-
-export const resetPasswordSchema = () => {
-    return [
-      body("password")
-        .notEmpty()
-        .withMessage("Invalid password")
-        .trim()
-        .isLength({ min: 5, max: 25 })
-        .withMessage("Password must be between 5 to 25 characters"),
-    ];
+export const productUpdateSchema = () => {
+  return [
+    param("id").notEmpty().withMessage("Product Id param is required"),
+    body("payload").notEmpty().withMessage("Payload is required"),
+    body("payload").custom((value: any) => {
+      if (!value || typeof value !== 'object') {
+        throw new Error("Payload must be an object");
+      }
+      if (
+        !('name' in value) &&
+        !('price' in value) &&
+        !('quantity' in value) &&
+        !('description' in value)
+      ) {
+        throw new Error("Payload must contain at least one valid field (name, price, quantity, description)");
+      }
+      return true;
+    })
+  ];
 };

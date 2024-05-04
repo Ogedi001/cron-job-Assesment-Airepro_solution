@@ -1,6 +1,6 @@
 export interface SalesData{
-  id:number
+  id?:number
   product_id?:number
   quantity_sold: number
-  sale_date:Date 
+  sale_date?:Date 
 }
